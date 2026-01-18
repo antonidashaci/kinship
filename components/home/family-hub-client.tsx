@@ -9,6 +9,7 @@ import { RecentActivityCard } from "@/components/home/recent-activity-card"
 import { QuickActionsCard } from "@/components/home/quick-actions-card"
 import { InviteCard } from "@/components/home/invite-card"
 import { HomeHeader } from "@/components/home/home-header"
+import { FamilyFeatureGrid } from "@/components/home/family-feature-grid"
 import { DigitalHugButton } from "@/components/hug/digital-hug-button"
 import { ReceivedHugNotification } from "@/components/hug/received-hug-notification"
 import type { Profile, Family, DomesticRole, Interaction } from "@/lib/types"
@@ -53,6 +54,11 @@ export function FamilyHubClient({
             {/* Family Members */}
             <BentoItem delay={0.3}>
               <FamilyMemberCard familyMembers={familyMembers} currentUserId={currentUser.id} />
+            </BentoItem>
+
+            {/* Family Apps - NEW */}
+            <BentoItem span="2" delay={0.35}>
+              <FamilyFeatureGrid />
             </BentoItem>
 
             {/* Active Roles Today */}
